@@ -6024,11 +6024,7 @@ class WeatherData(object):
 
         """
         if value is not None:
-            try:
-                value = int(value)
-            except ValueError:
-                raise ValueError('value {} need to be of type int '
-                                 'for field `relative_humidity`'.format(value))
+            
             if value < 0:
                 raise ValueError('value need to be greater or equal 0 '
                                  'for field `relative_humidity`')
